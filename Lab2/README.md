@@ -99,4 +99,4 @@ Hari Vaishu  <br>
 Do you want to contiue, press y for yes!<br>
 n<br>
 
-The flow chart of the problem is stated below: <br>
+The flow chart of the problem is stated below: 
