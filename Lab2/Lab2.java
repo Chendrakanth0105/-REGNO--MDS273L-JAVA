@@ -1,6 +1,5 @@
 package Lab2;
 
-import java.rmi.server.RemoteObject;
 import java.util.*;
 
 public class Lab2 {
