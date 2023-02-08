@@ -98,3 +98,7 @@ Printing the names after deletion:<br>
 Hari Vaishu  <br>
 Do you want to contiue, press y for yes!<br>
 n<br>
+
+FLOW CHART:
+<img width="808" alt="Screenshot 2023-02-08 at 18 12 59" src="https://user-images.githubusercontent.com/80877964/217532887-0b47b698-b809-4b84-80a1-ae07afba68d9.png">
+
