@@ -100,3 +100,4 @@ Do you want to contiue, press y for yes!<br>
 n<br>
 
 The flow chart of the problem is stated below: 
+[Flow Chart](/Lab2/images/flowchart.png "Flow Chart") 
