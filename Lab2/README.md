@@ -17,84 +17,84 @@ To Run the file:
 2. type the commang "javac filename.java" in the terminal
 3. then type "java filename" in the terminal.
 
-The output of the program looks like:
-What do you want to perform: 
+The output of the program looks like:<br>
+What do you want to perform: <br>
 1. Enter Name
 2. Search a Name
 3. Delete a Name
-4. Print all Names
-1
-Enter a name: 
-chandu
+4. Print all Names<br>
+1<br>
+Enter a name: <br>
+chandu<br>
  
-Do you want to contiue, press y for yes!
-y
+Do you want to contiue, press y for yes! <br>
+y<br>
 What do you want to perform: 
 1. Enter Name
 2. Search a Name
 3. Delete a Name
-4. Print all Names
-1
-Enter a name: 
-Hari
+4. Print all Names<br>
+1<br>
+Enter a name: <br>
+Hari<br>
  
-Do you want to contiue, press y for yes!
-y
+Do you want to contiue, press y for yes!<br>
+y<br>
 What do you want to perform: 
 1. Enter Name
 2. Search a Name
 3. Delete a Name
-4. Print all Names
-1     
-Enter a name: 
-Vaishu 
+4. Print all Names<br>
+1     <br>
+Enter a name: <br>
+Vaishu <br>
  
-Do you want to contiue, press y for yes!
-y
+Do you want to contiue, press y for yes!<br>
+y<br>
 What do you want to perform: 
 1. Enter Name
 2. Search a Name
 3. Delete a Name
-4. Print all Names
-2
-Enter a name you want to search:
-chandu
-The name is in the list.
+4. Print all Names<br>
+2<br>
+Enter a name you want to search:<br>
+chandu<br>
+The name is in the list.<br>
  
-Do you want to contiue, press y for yes!
-y
+Do you want to contiue, press y for yes!<br>
+y<br>
 What do you want to perform: 
 1. Enter Name
 2. Search a Name
 3. Delete a Name
-4. Print all Names
-2
-Enter a name you want to search:
-priya
-The name is not in the list.
+4. Print all Names<br>
+2<br>
+Enter a name you want to search:<br>
+priya<br>
+The name is not in the list.<br>
  
-Do you want to contiue, press y for yes!
-y
+Do you want to contiue, press y for yes!<br>
+y<br>
 What do you want to perform: 
 1. Enter Name
 2. Search a Name
 3. Delete a Name
-4. Print all Names
-3
-Enter a name you want to remove: 
-chandu
+4. Print all Names<br>
+3<br>
+Enter a name you want to remove: <br>
+chandu<br>
  
-Do you want to contiue, press y for yes!
-y
+Do you want to contiue, press y for yes!<br>
+y<br>
 What do you want to perform: 
 1. Enter Name
 2. Search a Name
 3. Delete a Name
-4. Print all Names
-4
-Printing all names in the list.
-chandu Hari Vaishu  
-Printing the names after deletion:
-Hari Vaishu  
-Do you want to contiue, press y for yes!
-n
+4. Print all Names<br>
+4<br>
+Printing all names in the list.<br>
+chandu Hari Vaishu  <br>
+Printing the names after deletion:<br>
+Hari Vaishu  <br>
+Do you want to contiue, press y for yes!<br>
+n<br>
