@@ -12,10 +12,10 @@ If the user choose "3" then the user will be asked to enter a name to delete fro
 
 If the user choose "4" then it will print the all the names in the list before and after deletion.
 
-To Run the file:
+Execution Steps:
 1. Save the java file
-2. type the commang "javac filename.java" in the terminal
-3. then type "java filename" in the terminal.
+2. type the commang "javac Lab2.java" in the terminal
+3. then type "java Lab2" in the terminal.
 
 The output of the program looks like:<br>
 What do you want to perform: <br>

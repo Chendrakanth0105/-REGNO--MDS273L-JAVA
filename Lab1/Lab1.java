@@ -63,19 +63,19 @@ public class Lab1{
 
         switch(State){
             case "JammuKashmir", "Himachal Pradesh", "Punjab", "Uttarakhand" ,"Uttar Pradesh", "Haryana":    
-             Region = "NORTH" ;   
+             Region = "Northern" ;   
              break;    
             case "Andhra Pradesh", "Karnataka", "Kerala", "Tamil Nadu", "Telangana":    
-             Region = "SOUTH"; 
+             Region = "Southern"; 
              break;  
             case "Bihar", "Orissa", "Jharkhand", "West Bengal": 
-             Region = "EAST";
+             Region = "Eastern";
              break;
             case "Rajasthan", "Gujarat", "Goa" , "Maharashtra":
-             Region = "WEST";
+             Region = "Werstern";
              break;
             case "Madhya Pradesh", "Chhattisgarh":
-             Region = "CENTRAL";
+             Region = "Central";
              break;
             case "Assam", "Sikkim", "Nagaland", "Meghalaya", "Manipur", "Mizoram", "Tripura" ,"Arunachal Pradesh":
              Region = "NORTH EAST";
