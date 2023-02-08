@@ -98,4 +98,5 @@ Printing the names after deletion:<br>
 Hari Vaishu  <br>
 Do you want to contiue, press y for yes!<br>
 n<br>
+<img width="808" alt="Screenshot 2023-02-08 at 18 12 59" src="https://user-images.githubusercontent.com/80877964/217535342-e3a5e15a-5c88-4eb4-bd55-c2a2fb2d3a59.png">
 
