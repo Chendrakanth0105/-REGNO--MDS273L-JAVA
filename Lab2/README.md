@@ -100,4 +100,4 @@ Do you want to contiue, press y for yes!<br>
 n<br>
 
 The flow chart of the problem is stated below: 
-[Flow Chart](./images/flowchart.png) 
+![Flow Chart](./images/flowchart.png) 
