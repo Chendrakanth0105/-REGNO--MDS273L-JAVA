@@ -3,11 +3,14 @@ import java.util.Scanner;
 
 public class Lab1{
     public static void main(String args[]){
+        // declare variables
         String Name,Class,Email,College,State,Region="Default";
         int Regno,Age;
         char Section, Gender;
         boolean Marriage;
         Float Fees;
+
+        // Take INPUTS
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter your name:");
         Name = scan.nextLine();
@@ -29,9 +32,9 @@ public class Lab1{
         Section = scan.nextLine().charAt(0);
         System.out.println("Enter your Registration number:");
         Regno = Integer.parseInt(scan.nextLine());
-        
         System.out.println("**********************************************************************");
 
+        // Display your details
         System.out.println("Name: "+Name);
         System.out.println("Age: "+Age);
         System.out.println("Gender: "+Gender);
@@ -42,14 +45,10 @@ public class Lab1{
         System.out.println("Class: "+Class);
         System.out.println("Section: "+Section);
         System.out.println("Regno: "+Regno);
-        
-
-
         System.out.println("**********************************************************************");   
-
-
         System.out.println("CHECK FOR YOUR GENDER");
-
+        
+        //Gender check
         if(Gender == 'M'){
             System.out.println("MALE");
         }
@@ -59,8 +58,8 @@ public class Lab1{
         else{
             System.out.println("INVALID GENDER");
         }
-         
 
+        // Region check
         switch(State){
             case "JammuKashmir", "Himachal Pradesh", "Punjab", "Uttarakhand" ,"Uttar Pradesh", "Haryana":    
              Region = "Northern" ;   
