@@ -15,13 +15,14 @@ class Student {
     }
 
     public void print() {
+        System.out.println("----------------------------------------");
         System.out.println("Name: " + Name);
         System.out.println("Registration Number: " + RegNo);
         System.out.println("Email: " + Email);
         System.out.println("Class: " + Class);
         System.out.println("Department: " + Department);
         System.out.println("Phone Number: " + Phonenumber);
-        System.out.println("----------------------------------------");
+        
     }
 
 }
@@ -91,6 +92,7 @@ public class Lab5 {
             for (int i = 0; i < counter; i++) {
                 if (sname.equalsIgnoreCase(studentarr[i].Name)) {
                     searchcounter = 1;
+                    studentarr[i].print();
                 }
             }
         } else if (opt == 2) {
@@ -101,6 +103,7 @@ public class Lab5 {
                 int R = studentarr[i].RegNo;
                 if (sreg == R) {
                     searchcounter = 1;
+                    studentarr[i].print();
                 }
             }
         }
@@ -108,7 +111,7 @@ public class Lab5 {
             System.out.println("The student with the details provided is not found!!");
         }
         if (searchcounter == 1) {
-            System.err.println("The student is found!!");
+            System.err.println("These are the requested student details!!!!!!");
         }
     }
 
