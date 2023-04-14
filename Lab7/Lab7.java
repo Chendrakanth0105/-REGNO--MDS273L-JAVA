@@ -1,66 +1,57 @@
 import java.io.*;
 import java.util.*;
 
-public class Lab7{        
-    public static void main(String[] args){
-        // READ THE FILE
-        readFile();
-        //SEPAL LENGTH
-        sepalLen();
-        //SEPAL WIDTH
-        sepalWidth();
-        //PETAL LENGTH
-        petalLen();
-        //PETAL WIDTH
-        petalWidth();
-    }
+public class Lab7 {
+    public static void main(String[] args) {
 
-    //**********************************************************************************//
-    static void readFile(){
-        System.out.println("THE DATA: ");
-        System.out.println("********");
-        try{
-            FileReader file = new FileReader("./Dataset/Iris.csv");
-            Scanner read = new Scanner(file);
-            //read the file
-            while(read.hasNextLine()){
-                String line[] = read.nextLine().split(",");
-                System.out.println(Arrays.toString(line));
-            }
-            read.close();
-        }
-        catch(Exception e){
+        try {
+            File newfile = new File("./Output/output.txt");
+            newfile.createNewFile();
+            FileWriter write = new FileWriter(newfile);
+            write.write("THE SUMMARY STATISTICS FOR EACH SPECIES OF IRIS FLOWER");
+            // READ THE FILE
+            readFile();
+            // SEPAL LENGTH
+            sepalLen(write);
+            // SEPAL WIDTH
+            sepalWidth(write);
+            // PETAL LENGTH
+            petalLen(write);
+            // PETAL WIDTH
+            petalWidth(write);
+            write.close();
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-    //**********************************************************************************//
-    static int lenFile(){
+
+    // **********************************************************************************//
+    static int readFile() {
         int length = 0;
-        try{
+        try {
             FileReader file = new FileReader("./Dataset/Iris.csv");
             Scanner read = new Scanner(file);
-            //read the file
-            while(read.hasNextLine()){
+            // read the file
+            while (read.hasNextLine()) {
                 String line[] = read.nextLine().split(",");
                 length = length+1;
             }
             read.close();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return length;
     }
-    //**********************************************************************************//
-    static void sepalLen(){
-        int length = lenFile();
-        float sepallength[] = new float[length-1];
-        try{
+    // **********************************************************************************//
+    static void sepalLen(FileWriter write) {
+        int length = readFile();
+        float sepallength[] = new float[length - 1];
+        try {
             FileReader file = new FileReader("./Dataset/Iris.csv");
             Scanner read = new Scanner(file);
-            //SEPAL LENGTH
+            // SEPAL LENGTH
             int count = 0;
-            while(read.hasNextLine()){
+            while (read.hasNextLine()) {
                 String line[] = read.nextLine().split(",");
                 if (line[1].matches("^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$")) {
                     sepallength[count] = Float.parseFloat(line[1]);
@@ -68,36 +59,41 @@ public class Lab7{
                 }
             }
             read.close();
-            //TO PRINT THE SEPAL LENGTH ARRAY
-            // for(int i = 0;i<sepallength.length;i++){
-            //     System.out.println(sepallength[i]);
-            // }
-            System.out.println(" ");
-            System.out.println("SEPAL LENGTH ");
-            System.out.println("************");
-            System.out.println("");
-            System.out.println("SUMMARY");
-            System.out.println("*******");
-            System.out.println("MIN: "+min(sepallength));
-            System.out.println("MAX: "+max(sepallength));
-            System.out.println("MEAN: "+mean(sepallength));
-            System.out.println("MEDIAN: "+median(sepallength));
-            //System.out.println("MODE: "+mode(sepallength));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
-        catch(Exception e){
+        // TO PRINT THE SEPAL LENGTH ARRAY
+        // for(int i = 0;i<sepallength.length;i++){
+        // System.out.println(sepallength[i]);
+        // }
+        try {
+            write.write("\n ");
+            write.write("\n" + "SEPAL LENGTH ");
+            write.write("\n" + "************");
+            write.write("\n" + "");
+            write.write("\n" + "SUMMARY");
+            write.write("\n" + "*******");
+            write.write("\n" + "MIN: " + min(sepallength));
+            write.write("\n" + "MAX: " + max(sepallength));
+            write.write("\n" + "MEAN: " + mean(sepallength));
+            write.write("\n" + "MEDIAN: " + median(sepallength));
+            write.write("\n" + "MODE: " + mode(sepallength));
+            write.write("\n" + "");
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-    //**********************************************************************************//
-    static void sepalWidth(){
-        int length = lenFile();
-        float sepalwidth[] = new float[length-1];
-        try{
+
+    // **********************************************************************************//
+    static void sepalWidth(FileWriter write) {
+        int length = readFile();
+        float sepalwidth[] = new float[length - 1];
+        try {
             FileReader file = new FileReader("./Dataset/Iris.csv");
             Scanner read = new Scanner(file);
-            //SEPAL LENGTH
+            // SEPAL LENGTH
             int count = 0;
-            while(read.hasNextLine()){
+            while (read.hasNextLine()) {
                 String line[] = read.nextLine().split(",");
 
                 if (line[2].matches("^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$")) {
@@ -106,37 +102,41 @@ public class Lab7{
                 }
             }
             read.close();
-            //TO PRINT THE SEPAL LENGTH ARRAY
-            // for(int i = 0;i<sepallength.length;i++){
-            //     System.out.println(sepallength[i]);
-            // }
-
-            System.out.println(" ");
-            System.out.println("SEPAL WIDTH ");
-            System.out.println("***********");
-            System.out.println("");
-            System.out.println("SUMMARY");
-            System.out.println("*******");
-            System.out.println("MIN: "+min(sepalwidth));
-            System.out.println("MAX: "+max(sepalwidth));
-            System.out.println("MEAN: "+mean(sepalwidth));
-            System.out.println("MEDIAN: "+median(sepalwidth));
-            //System.out.println("MODE: "+mode(sepalwidth));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
-        catch(Exception e){
+        // TO PRINT THE SEPAL LENGTH ARRAY
+        // for(int i = 0;i<sepallength.length;i++){
+        // System.out.println(sepallength[i]);
+        // }
+        try {
+            write.write(" ");
+            write.write("\n" + "SEPAL WIDTH ");
+            write.write("\n" + "************");
+            write.write("\n" + "");
+            write.write("\n" + "SUMMARY");
+            write.write("\n" + "*******");
+            write.write("\n" + "MIN: " + min(sepalwidth));
+            write.write("\n" + "MAX: " + max(sepalwidth));
+            write.write("\n" + "MEAN: " + mean(sepalwidth));
+            write.write("\n" + "MEDIAN: " + median(sepalwidth));
+            write.write("\n" + "MODE: " + mode(sepalwidth));
+            write.write("\n" + "");
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-    //**********************************************************************************//
-    static void petalLen(){
-        int length = lenFile();
-        float petallength[] = new float[length-1];
-        try{
+
+    // **********************************************************************************//
+    static void petalLen(FileWriter write) {
+        int length = readFile();
+        float petallength[] = new float[length - 1];
+        try {
             FileReader file = new FileReader("./Dataset/Iris.csv");
             Scanner read = new Scanner(file);
-            //SEPAL LENGTH
+            // SEPAL LENGTH
             int count = 0;
-            while(read.hasNextLine()){
+            while (read.hasNextLine()) {
                 String line[] = read.nextLine().split(",");
 
                 if (line[3].matches("^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$")) {
@@ -145,36 +145,37 @@ public class Lab7{
                 }
             }
             read.close();
-            //TO PRINT THE SEPAL LENGTH ARRAY
-            // for(int i = 0;i<sepallength.length;i++){
-            //     System.out.println(sepallength[i]);
-            // }
-            System.out.println(" ");
-            System.out.println("PETAL LENGTH ");
-            System.out.println("************");
-            System.out.println("");
-            System.out.println("SUMMARY");
-            System.out.println("*******");
-            System.out.println("MIN: "+min(petallength));
-            System.out.println("MAX: "+max(petallength));
-            System.out.println("MEAN: "+mean(petallength));
-            System.out.println("MEDIAN: "+median(petallength));
-            //System.out.println("MODE: "+mode(petallength));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
-        catch(Exception e){
+        try {
+            write.write(" ");
+            write.write("\n" + "PETAL LENGTH ");
+            write.write("\n" + "************");
+            write.write("\n" + "");
+            write.write("\n" + "SUMMARY");
+            write.write("\n" + "*******");
+            write.write("\n" + "MIN: " + min(petallength));
+            write.write("\n" + "MAX: " + max(petallength));
+            write.write("\n" + "MEAN: " + mean(petallength));
+            write.write("\n" + "MEDIAN: " + median(petallength));
+            write.write("\n" + "MODE: " + mode(petallength));
+            write.write("\n" + "");
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-    //**********************************************************************************//
-    static void petalWidth(){
-        int length = lenFile();
-        float petalwidth[] = new float[length-1];
-        try{
+
+    // **********************************************************************************//
+    static void petalWidth(FileWriter write) {
+        int length = readFile();
+        float petalwidth[] = new float[length - 1];
+        try {
             FileReader file = new FileReader("./Dataset/Iris.csv");
             Scanner read = new Scanner(file);
-            //SEPAL LENGTH
+            // SEPAL LENGTH
             int count = 0;
-            while(read.hasNextLine()){
+            while (read.hasNextLine()) {
                 String line[] = read.nextLine().split(",");
 
                 if (line[4].matches("^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$")) {
@@ -183,45 +184,48 @@ public class Lab7{
                 }
             }
             read.close();
-            //TO PRINT THE SEPAL LENGTH ARRAY
-            // for(int i = 0;i<sepallength.length;i++){
-            //     System.out.println(sepallength[i]);
-            // }
-            System.out.println(" ");
-            System.out.println("PETAL WIDTH ");
-            System.out.println("***********");
-            System.out.println("");
-            System.out.println("SUMMARY");
-            System.out.println("*******");
-            System.out.println("MIN: "+min(petalwidth));
-            System.out.println("MAX: "+max(petalwidth));
-            System.out.println("MEAN: "+mean(petalwidth));
-            System.out.println("MEDIAN: "+median(petalwidth));
-            //System.out.println("MODE: "+mode(petalwidth));
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        try {
+            write.write(" ");
+            write.write("\n" + "PETAL WIDTH ");
+            write.write("\n" + "************");
+            write.write("\n" + "");
+            write.write("\n" + "SUMMARY");
+            write.write("\n" + "*******");
+            write.write("\n" + "MIN: " + min(petalwidth));
+            write.write("\n" + "MAX: " + max(petalwidth));
+            write.write("\n" + "MEAN: " + mean(petalwidth));
+            write.write("\n" + "MEDIAN: " + median(petalwidth));
+            write.write("\n" + "MODE: " + mode(petalwidth));
+            write.write("\n" + "");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }   
     }
-    //**********************************************************************************//
-    static float mean(float arr[]){
+
+    // **********************************************************************************//
+    static float mean(float arr[]) {
         float meanvalue;
-        float sum=0;
-        for(int i = 0; i<arr.length;i++){
-            sum = sum+arr[i];
+        float sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
         }
-        return meanvalue = sum/arr.length;
+        return meanvalue = sum / arr.length;
     }
-    //**********************************************************************************//
-    static float median(float arr[]){
-        float medianvalue=0;
+
+    // **********************************************************************************//
+    static float median(float arr[]) {
+        float medianvalue = 0;
         int l = arr.length;
         int index;
-        //Sorting the array
-        for(int i=0;i<l;i++){
+        // Sorting the array
+        for (int i = 0; i < l; i++) {
             index = i;
-            for(int j=i;j<=l-1;j++){
-                if(arr[j]<arr[index]){
+            for (int j = i; j <= l - 1; j++) {
+                if (arr[j] < arr[index]) {
                     index = j;
                 }
             }
@@ -232,38 +236,55 @@ public class Lab7{
         }
         // To check the sorted array
         // for(int i =0;i<arr.length;i++){
-        //     System.out.println(arr[i]);
+        // System.out.println(arr[i]);
         // }
-        //Finding median
-        if(l % 2 != 0){
-            medianvalue = arr[l/2];
-        }
-        else{
-            medianvalue = (arr[(l/2)-1] + arr[(l/2)])/2;
+        // Finding median
+        if (l % 2 != 0) {
+            medianvalue = arr[l / 2];
+        } else {
+            medianvalue = (arr[(l / 2) - 1] + arr[(l / 2)]) / 2;
         }
 
         return medianvalue;
     }
-    //**********************************************************************************//
-    static float mode(float arr[]){
-        float modevalue=0;
+
+    // **********************************************************************************//
+    static float mode(float arr[]) {
+        float modevalue = 0;
+        int maxcount = 0;
+        float maxvalue = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int count = 0;
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    count = count + 1;
+                }
+            }
+            if (count > maxcount) {
+                maxcount = count;
+                maxvalue = arr[i];
+            }
+        }
+        modevalue = maxvalue;
         return modevalue;
     }
-    //**********************************************************************************//
-    static float min(float arr[]){
+
+    // **********************************************************************************//
+    static float min(float arr[]) {
         float minvalue = arr[0];
-        for(int i = 1; i<arr.length; i++){
-            if(arr[i]<minvalue){
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < minvalue) {
                 minvalue = arr[i];
             }
         }
         return minvalue;
     }
-    //**********************************************************************************//
-    static float max(float arr[]){
+
+    // **********************************************************************************//
+    static float max(float arr[]) {
         float maxvalue = arr[0];
-        for(int i = 1; i<arr.length; i++){
-            if(arr[i]>maxvalue){
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > maxvalue) {
                 maxvalue = arr[i];
             }
         }
