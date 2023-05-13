@@ -1,32 +1,5 @@
 package Lab5;
 import java.util.*;
-class Student {
-    String Name, Email, Class, Department;
-    int RegNo;
-    long Phonenumber;
-
-    Student(String Name, String Email, String Class, String Department, int RegNo, long Phonenumber) {
-        this.Name = Name;
-        this.Email = Email;
-        this.Class = Class;
-        this.Department = Department;
-        this.RegNo = RegNo;
-        this.Phonenumber = Phonenumber;
-    }
-
-    public void print() {
-        System.out.println("----------------------------------------");
-        System.out.println("Name: " + Name);
-        System.out.println("Registration Number: " + RegNo);
-        System.out.println("Email: " + Email);
-        System.out.println("Class: " + Class);
-        System.out.println("Department: " + Department);
-        System.out.println("Phone Number: " + Phonenumber);
-        
-    }
-
-}
-
 public class Lab5 {
     static Scanner scan = new Scanner(System.in);
     static int counter = 0;
@@ -120,6 +93,33 @@ public class Lab5 {
         for (int i = 0; i < counter; i++) {
             studentarr[i].print();
         }
+    }
+
+}
+
+class Student {
+    String Name, Email, Class, Department;
+    int RegNo;
+    long Phonenumber;
+
+    Student(String Name, String Email, String Class, String Department, int RegNo, long Phonenumber) {
+        this.Name = Name;
+        this.Email = Email;
+        this.Class = Class;
+        this.Department = Department;
+        this.RegNo = RegNo;
+        this.Phonenumber = Phonenumber;
+    }
+
+    public void print() {
+        System.out.println("----------------------------------------");
+        System.out.println("Name: " + Name);
+        System.out.println("Registration Number: " + RegNo);
+        System.out.println("Email: " + Email);
+        System.out.println("Class: " + Class);
+        System.out.println("Department: " + Department);
+        System.out.println("Phone Number: " + Phonenumber);
+        
     }
 
 }
